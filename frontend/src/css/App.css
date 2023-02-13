@@ -1,0 +1,33 @@
+:root{
+  --clr-main: #E50914;
+  --clr-sec: #000000;
+  --clr-third: #000000;
+  --clr-grey: #1e1e1e;
+
+  --clr-fifth: #564D4D;
+  --clr-sixth: #831010;
+
+  --clr-seventh: white;
+
+  
+  --int-width: 80rem;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-margin-top: 10000rem;
+}
+
+body{
+  margin-inline: max(calc(0.5rem*1), calc(50% - 40rem));
+  background-color: #000000;
+  color: var(--clr-seventh);
+}
+
+*:focus-visible {
+  box-shadow: 0 0 0 0.2rem white;
+}
+
+a {
+  color: var(--clr-main);
+}

@@ -1,0 +1,21 @@
+button {
+    all: unset;
+    cursor: pointer;
+    background-color: var(--clr-main);
+    border-radius: 0.5em;
+    padding: 1em 0em;
+    color: var(--clr-seventh);
+    width: 100%;
+    text-align: center;
+    margin: 0.2rem;
+}
+
+.scroll-button {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    z-index: 0;
+    width: 6.25rem;
+    text-transform: uppercase;
+    box-shadow: 0rem 0rem 0rem 0.1rem rgba(0, 0, 0, 1);
+}

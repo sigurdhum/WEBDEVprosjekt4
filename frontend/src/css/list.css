@@ -1,0 +1,42 @@
+.list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(37.5rem, 1fr));
+    grid-gap: 1rem;
+    counter-reset: filmer;
+    margin-bottom: 2vh;
+}
+
+.filterDiv h2{
+    margin-bottom: 0.5rem;
+}
+
+
+@media (max-width: 37.5rem) {
+    .list{
+        grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+        overflow-x: scroll;
+        margin-bottom: 10vh;
+    }
+}
+
+#sortbtn{
+    width: fit-content;
+    font-size: 1.25rem;
+    padding: 0.25em 0.8em;
+    border-radius: 0.25em;
+}
+
+.inline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0.5em;
+}
+
+.sortTitle{
+    margin-bottom: 0.5rem;
+}
+
+#mainContent {
+    scroll-margin-top: 13rem;
+
+}

@@ -1,0 +1,130 @@
+:root {
+    --int-height-pic: 12.5rem;
+
+    --clr-loading: grey;
+
+    --clr-card: #1F1F1F;
+
+    --int-animation-duration: 1.2s;
+
+    --int-border-radius: 2rem;
+}
+
+.movieCard {
+    display: flex;
+    background-color: var(--clr-card);
+    text-align: left;
+    padding: 2em 2em 1em 2em;
+    border-radius: 2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.movieCard:hover {
+    box-shadow: 0 0 0.5rem 0 var(--clr-main);
+}
+
+.movieCardTitle {
+    font-size: 2rem;
+    line-height: 1.1;
+    letter-spacing: 0.01rem;
+    margin: 0;
+}
+
+.movie-info {
+    margin: 0;
+}
+
+.movieCard_img {
+    height: 13.75rem;
+    aspect-ratio: 2/3;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movieCard_info {
+    height: auto;
+    margin-left: 1rem;
+}
+
+#movie_stats {
+    display: flex;
+}
+
+#age::after {
+    content: " år";
+}
+
+.loading,
+#loading {
+    background: var(--clr-loading) !important;
+    color: transparent;
+    border-radius: 1em;
+    user-select: none;
+    cursor: default;
+    animation-name: backgroundColorPalette;
+    animation-duration: var(--int-animation-duration);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.loading::before,
+#loading::before {
+    content: " ";
+}
+
+.mobile{
+    display: none;
+}
+
+@keyframes backgroundColorPalette {
+    100% {
+        background: #1b1b1b;
+    }
+}
+
+@media (min-width: 37.5rem) {
+    #movie_stats {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 37.5rem) {
+    .movieCard {
+        display: flex;
+        flex-direction: column;
+        padding: 0rem;
+        padding-bottom: 1rem;
+        --int-border-radius: 1rem;
+        height: var(--int-height-pic)*4;
+        width: var(--int-height-pic);
+        overflow: hidden;
+        margin-inline: auto;
+    }
+    
+    .movieCard_img {
+        aspect-ratio: 2/3;
+        height: 15.625rem;
+    }
+
+    .tagsHolder,
+    #description,
+    #movie_stats {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+        width: calc(100% - 1rem);
+        border-radius: calc(var(--int-border-radius) - 0.5rem);
+    }
+
+    .movieCard_img {
+        width: var(--int-height-pic);
+    }
+}

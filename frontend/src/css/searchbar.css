@@ -1,0 +1,29 @@
+:root{
+    --int-input-height: 4rem;
+}
+
+input[type=text]{
+    background-color: #111;
+    color: var(--clr-seventh);
+    border: calc(var(--int-input-height)/20) solid #e50914b3;
+    font-size: calc(var(--int-input-height)/2);
+    max-width: calc(100% - var(--int-input-height) / 10*2);
+    height: var(--int-input-height);
+    border-radius: calc(var(--int-input-height) / 2);
+    padding: calc(var(--int-input-height) / 10);
+    width: 100%;
+}
+
+.searchbar{
+    margin-top: 7.5rem;
+    position: sticky;
+    top: 5rem;
+    z-index: 2;
+}
+
+@media (max-width: 37.5rem) {
+    .searchbar{
+        margin-top: 6rem;
+    }
+}
+

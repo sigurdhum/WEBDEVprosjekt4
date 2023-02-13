@@ -1,0 +1,109 @@
+:root {
+    --int-margin-top: 5rem;
+}
+
+.movieModal {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(1.25rem) saturate(160%) contrast(45%) brightness(140%);
+    -webkit-backdrop-filter: blur(1.25rem) saturate(160%) contrast(45%) brightness(140%);
+    position: fixed;
+    inset: 0;
+    margin-top: var(--int-margin-top);
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.modalCard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    margin-top: var(--int-margin-top);
+    background-color: var(--clr-third);
+    padding: 2em 2em;
+    width: 50rem;
+    max-width: 90%;
+    margin-inline: auto;
+    border-radius: 2em;
+    height: fit-content;
+    max-height: 80vh;
+    margin-bottom: 1em;
+    z-index: 3;
+}
+
+.modalCardHolder {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.modal_img {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 12.5rem;
+}
+
+.modal_movieCard_info{
+    flex: 2;
+    margin-left: 2rem;
+}
+
+#modal_movie_stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#modal_movie_stats > * {
+    margin: 0rem 1rem;
+}
+
+.modalCard .tagsHolder {
+    display: block;
+}
+
+.closeButton {
+    position: fixed;
+    left: 50%;
+    top:5.5rem;
+    max-width: 4rem;
+    padding: 0.5rem 1em;
+    width: auto;
+    cursor: pointer;
+    z-index: 4;
+    box-shadow: 0rem 0rem 0rem 0.5rem rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 37.5rem) {
+    .modalCard {
+        padding: 1em 1em;
+        border-radius: 1em;
+    }
+
+    .modal_movieCard_info {
+        margin-left: 0rem;
+    }
+    
+    .modalCardHolder {
+        flex-direction: column;
+    }
+
+    .modal_img {
+        height: 18.75rem;
+        width: 6.25rem;
+        margin: auto;
+    }
+
+    .modalTitle {
+        text-align: left;
+    }
+
+    .closeButton {
+        left: 42%;
+        box-shadow: 0rem 0rem 0rem 0.2rem rgba(0, 0, 0, 1);
+    }
+}

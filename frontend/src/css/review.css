@@ -1,0 +1,37 @@
+.review {
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.reviewDiv .review p{
+    background-color: var(--clr-grey);
+    padding: 1em 2em;
+    border-radius: 2em;
+    margin: 0;
+    margin-bottom: 0.8rem;
+}
+
+.reviewDiv input[type=text]{
+    --int-input-height: 2.5rem;
+}
+
+#reviewInput{
+    margin: 0.2rem;
+}
+
+.inputReview{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1em;
+    overflow: hidden;
+}
+
+.inputReview button{
+    width: 95%;
+}
+
+.inputReview :focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem white;
+  }

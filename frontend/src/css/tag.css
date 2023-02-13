@@ -1,0 +1,18 @@
+.movieTag {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: auto;
+}
+
+.movieTag > p {
+    background-color: var(--clr-main);
+    width: fit-content;
+    padding: 0.25em 0.5em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 1.25em;
+    margin-right: 0.25em;
+    margin-block: 0.25em;
+}
+

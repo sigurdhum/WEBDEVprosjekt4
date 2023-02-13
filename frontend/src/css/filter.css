@@ -1,0 +1,45 @@
+.filter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 0rem;
+    font-size: 1.25rem;
+}
+.filter > label {
+    display: flex;
+    padding: 0.25em 0.5em;
+    padding-right: 1rem;
+    margin-right: 0.75em;
+    cursor: pointer;
+    border-radius: 0.25em;
+    background-color: #1F1F1F;
+}
+
+.filter button {
+    all: unset;
+}
+
+.filterButton:has(input) input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.filterButton:has(input:checked) {
+    background-color: var(--clr-main);
+    cursor: default;
+}
+
+.filterButton:has(input:focus) {
+    box-shadow: 0 0 0 0.2rem white;
+}
+
+#fuckFirefox{
+    margin-bottom: 0.5rem;
+}
+
+#fuckFirefox:has(a){
+    display: none;
+}
+
